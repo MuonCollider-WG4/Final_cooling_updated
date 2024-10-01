@@ -1,0 +1,15 @@
+ #NTuple/Z0                                                                      
+ output from Ecalc9f version   2.09
+  settings: 
+    particle type:            2
+    pzmin/pzmax:    0.0000000000000000      /   100.00000000000000     
+    transverse cuts:    0.0000000000000000        0.0000000000000000     
+    longitudinal cut:    0.0000000000000000     
+    RF frequency (MHz):    109.84095032338607     
+    sigma cut:    4.0000000000000000     
+    subtract out amplitude correlation
+    wrnew9 =  F
+
+regn #   Z           Bz          eperp       elong       e6D         Ldim        Pzavg       beta        alpha       betaL       alphaL      n0          n1          n2          Lcan(eVs)   sigmaE      sigmaT      corrE       corrT       sigmaE_c    xavg        yavg        Dx          Dy          Dr          Dr2
+     1  0.0000E+00 -0.2560E+02  0.9864E-04  0.3837E-02  0.3779E-10  0.1820E+00  0.5673E-01  0.1482E-01 -0.8229E-01  0.1194E+01 -0.7000E+00  0.9660E+05  0.9660E+05  0.9660E+05  0.1265E-03  0.2546E-02  0.6593E-09 -0.8159E+00  0.3291E-06  0.2534E-02 -0.2530E-05 -0.6417E-05 -0.1741E-03  0.2460E-03 -0.5225E-02 -0.2410E-04
+     2  0.3255E+01  0.1630E+02  0.8164E-04  0.4979E-02  0.3365E-10  0.6977E+00  0.5388E-01  0.2644E-01 -0.1298E+00  0.2425E+01 -0.9257E+00  0.8779E+05  0.8779E+05  0.8779E+05  0.4015E-03  0.2117E-02  0.1136E-08  0.1858E+00  0.5149E-06  0.2116E-02  0.3963E-05  0.6958E-05 -0.1044E-03  0.1526E-03 -0.1707E-02 -0.7306E-05
