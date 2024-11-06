@@ -1,0 +1,41 @@
+import numpy as np
+
+z_momentum = 95
+gamma_v = np.sqrt(z_momentum**2+105.6**2)/105.6
+beta_v = np.sqrt(gamma_v**2-1)/gamma_v
+
+beta = 158 #mm
+alpha = 0.5
+gamma = (1+alpha**2)/beta
+emit_t = 0.14/(beta_v*gamma_v) #mm
+
+particles_num = 100000
+sigma_t = np.sqrt(beta*emit_t)
+
+x = np.random.normal(0,sigma_t,particles_num)
+temp = np.random.normal(0,sigma_t,particles_num)
+x_p = (temp-alpha*x)/beta
+px = z_momentum*x_p
+
+y = np.random.normal(0,sigma_t,particles_num)
+temp = np.random.normal(0,sigma_t,particles_num)
+y_p = (temp-alpha*y)/beta
+py = z_momentum*y_p
+
+sigma_time = 0.16 #ns
+sigma_pz = 5
+
+t = np.random.normal(0,sigma_time,particles_num)
+pz = np.random.normal(z_momentum,sigma_pz,particles_num)
+
+#t_pz = np.random.multivariate_normal([0, z_momentum], [[sigma_time**2, 0.5*sigma_time*sigma_pz], [0.5*sigma_time*sigma_pz, sigma_pz**2]], particles_num)
+#t = t_pz[:,0]
+#pz = t_pz[:,1]
+
+pre = 'E:/final_cooling/'
+with open(pre + 'beam_final_cooling.beam', 'w') as f:
+    f.write('#BLTrackFile solenoid_cooling_channel \n')
+    f.write('#x y z Px Py Pz t PDGid EvNum TrkId Parent weight \n')
+    f.write('#mm mm mm MeV/c MeV/c MeV/c ns \n')
+    for i in range(particles_num):
+        f.write(' '.join([str(x[i]), str(y[i]), str(0), str(px[i]), str(py[i]), str(pz[i]), str(t[i]), str(-13), str(i+1), str(1), str(0), str(1), '\n']))
