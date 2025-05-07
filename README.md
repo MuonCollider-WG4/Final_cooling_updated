@@ -12,3 +12,6 @@ Version for the 2025 report to the ESPPU
 ---------------------
 Version for the 2024 parameters report (https://arxiv.org/abs/2411.02966)
 
+2025-4-24-cooling_meeting
+---------------------
+Version for the results presented in the cooling meeting (https://indico.cern.ch/event/1535629/).
